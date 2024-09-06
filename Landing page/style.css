@@ -1,0 +1,233 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    color: white;
+}
+
+nav {
+    background: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+    transition: background 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url('https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.webp?b=1&s=612x612&w=0&k=20&c=O-tuIQhKPb_RI04HQel0Dgn64G_59YQV0jdTFjzrfc4=') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+     border-radius: 5px; 
+    background: #007ced;
+    color: white; 
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #005bb5;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+.featured-albums {
+    text-align: center;
+}
+
+.featured-albums h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.featured-albums h3{
+    color:#f9f9f9;
+}
+
+.albums {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.album {
+    background: #371c33;
+    border: 1px solid #393838; 
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+     box-shadow: 0 0 10px rgba(202, 193, 193, 0.1); 
+    
+}
+
+.album img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.album h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.album p {
+    color: #555;
+    margin: 0 0 10px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background: #9a0a4b;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #972b5c;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007ced;
+}
+
+/* Mobile Menu Styling */
+@media(max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links li a {
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        display: block;
+    }
+}
